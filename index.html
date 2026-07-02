@@ -330,7 +330,9 @@ color: var(--text-faint);
 </main>
 
 <script>
+// change npub to your own npub
 const NPUB = 'npub1marc26z8nh3xkj5rcx7ufkatvx6ueqhp5vfw9v5teq26z254renshtf3g0';
+//Change to your own website
 const WEBSITE = 'https://marc.shakesphere.wtf/';
 
 async function fetchBlockHeader(){
@@ -390,7 +392,8 @@ const block = await fetchBlockHeader();
 const height = block.height;
 const iso = isoNow();
 const headerShort = block.hash.slice(0, 20) + '\u2026' + block.hash.slice(-10);
-const markdown = '> **' + NPUB + '**\n> **Website:** ' + WEBSITE + '\n> **Block Height:** ' + height + '\n> **Timestamp (UTC):** ' + iso + '\n> **Block Header:** ' + block.hash + '\n\n[Donate at least a buck](https://pay.funwithfreedomtech.com/paywall/mZkPkoRDMm4UQ3CUDR4Xj7)\n[Don\'t have a buck? Get 5 bucks when you spend $5.](https://cash.app/refer/WJLKQMT)';
+//change your Donate And Referal URL
+const markdown = '> **' + NPUB + '**\n> **Website:** ' + WEBSITE + '\n> **Block Height:** ' + height + '\n> **Timestamp (UTC):** ' + iso + '\n> **Block Header:** ' + block.hash + '\n\n[Donate at least a buck](https://pay.funwithfreedomtech.com/paywall/mZkPkoRDMm4UQ3CUDR4Xj7)\n[Don\'t have a buck? Get 5 bucks when you sign up for The Cash App and spend $5.](https://cash.app/refer/WJLKQMT)';
 
 stampHeightEl.textContent = '#' + height;
 stampDateEl.textContent = iso;
