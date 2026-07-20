@@ -267,8 +267,8 @@ color: var(--text-faint);
 <header class="masthead">
 <p class="eyebrow">Proof of Time</p>
 <h1>Bitcoin Block Timestamp</h1>
-<p class="lede">Stamp this exact moment with the Bitcoin block height. Copy the record into blog-posts, commits, or contracts as proof you created it. Print it out and add it to a photo to timestamp the photo. <a href="https://github.com/Marc26z/timeStamper/">The vibe code is free and open source</a>. Fork it and make any changes you want.
-    /p>
+<p class="lede">Stamp this exact moment with the Bitcoin block height. Copy the record into blog-posts, commits, or contracts as proof you created it. Print it out and add it to a photo to timestamp the photo. <a href="https://github.com/Marc26z/timeStamper/">The vibe code is free and open source</a>. Want to make your own time stamper? Right click
+    </p>&<!-- Typo intended -->
 </header>
 
 <section class="slip">
@@ -399,8 +399,7 @@ const height = block.height;
 const iso = isoNow();
 const headerShort = block.hash.slice(0, 20) + '\u2026' + block.hash.slice(-10);
 //change your Donate And Referal URL
-//change the lightning address and image of the tip jar for your own website.
-    const markdown = '**' + NPUB + '**\n**Website:** ' + WEBSITE + '\n**Block Height:** ' + height + '\n**Timestamp (UTC):** ' + iso + '\n**Block Header:** ' + block.hash + '\n\n[[![Scan or click to tip](https://github.com/Marc26z/FunWithFreedomTech/blob/main/public/blog/images/ClickScanTip.jpg?raw=true)](lightning:funwithfreedomtech@getalby.com)';
+const markdown = '**' + NPUB + '**\n**Website:** ' + WEBSITE + '\n**Block Height:** ' + height + '\n**Timestamp (UTC):** ' + iso + '\n**Block Header:** ' + block.hash + '\n\n[![Scan to tip](https://github.com/Marc26z/FunWithFreedomTech/blob/main/public/blog/images/ClickScanTip.jpg?raw=true)](lightning:funwithfreedomtech@getalby.com)';
 
 stampHeightEl.textContent = '#' + height;
 stampDateEl.textContent = iso;
