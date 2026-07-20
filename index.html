@@ -399,7 +399,8 @@ const height = block.height;
 const iso = isoNow();
 const headerShort = block.hash.slice(0, 20) + '\u2026' + block.hash.slice(-10);
 //change your Donate And Referal URL
-const markdown = '**' + NPUB + '**\n**Website:** ' + WEBSITE + '\n**Block Height:** ' + height + '\n**Timestamp (UTC):** ' + iso + '\n**Block Header:** ' + block.hash + '\n\n[Donate at least a buck](https://pay.funwithfreedomtech.com/paywall/mZkPkoRDMm4UQ3CUDR4Xj7)\n\n[![Scan to tip](https://github.com/Marc26z/FunWithFreedomTech/blob/main/public/blog/images/ClickScanTip.jpg?raw=true)](https://pay.funwithfreedomtech.com/paywall/mZkPkoRDMm4UQ3CUDR4Xj7)';
+//change the lightning address and image of the tip jar for your own website.
+    const markdown = '**' + NPUB + '**\n**Website:** ' + WEBSITE + '\n**Block Height:** ' + height + '\n**Timestamp (UTC):** ' + iso + '\n**Block Header:** ' + block.hash + '\n\n[[![Scan or click to tip](https://github.com/Marc26z/FunWithFreedomTech/blob/main/public/blog/images/ClickScanTip.jpg?raw=true)](lightning:funwithfreedomtech@getalby.com)';
 
 stampHeightEl.textContent = '#' + height;
 stampDateEl.textContent = iso;
