@@ -10,14 +10,19 @@
 <style>
 :root{
 --bg: #000000;
---card-bg: #0d0d0d;
---field-bg: #0d0d0d;
---text: #ffffff;
---text-soft: rgba(255,255,255,0.65);
---text-faint: rgba(255,255,255,0.4);
---accent: #a90000;
---accent-hover: #c40000;
---focus: #ffffff;
+--card-bg: #0F0F0F;
+--field-bg: #0F0F0F;
+--secondary: #1F1F1F;
+--muted: #262626;
+--border: #2E2E2E;
+--text: #F2F2F2;
+--text-soft: #A6A6A6;
+--text-faint: rgba(166,166,166,0.55);
+--accent: #6366F1;
+--accent-hover: #818CF8;
+--accent-foreground: #FFFFFF;
+--destructive: #EF4444;
+--focus: #FFFFFF;
 }
 
 *{ box-sizing: border-box; }
@@ -77,13 +82,21 @@ line-height: 1.55;
 color: var(--text-soft);
 }
 
+a{
+color: var(--accent);
+text-decoration: none;
+transition: color 0.15s ease;
+}
+
+a:hover{ color: var(--accent-hover); text-decoration: underline; }
+
 .slip{
 position:relative;
 background: var(--card-bg);
-border: 1px solid rgba(169,0,0,0.35);
+border: 1px solid var(--border);
 border-radius: 6px;
 padding: 36px 28px 30px;
-box-shadow: 0 0 40px -10px rgba(169,0,0,0.3);
+box-shadow: 0 0 40px -10px rgba(99,102,241,0.25);
 }
 
 .slip::before{
@@ -100,7 +113,7 @@ display:block;
 width:100%;
 padding: 16px 20px;
 background: var(--accent);
-color: var(--text);
+color: var(--accent-foreground);
 border: none;
 border-radius: 4px;
 font-family: 'IBM Plex Mono', monospace;
@@ -185,7 +198,7 @@ opacity: 0.85;
 }
 
 .tear{
-border-top: 2px dashed rgba(169,0,0,0.4);
+border-top: 2px dashed var(--border);
 margin: 26px 0 22px;
 }
 
@@ -212,7 +225,7 @@ textarea, input[type="text"]{
 flex:1;
 resize:none;
 background: var(--field-bg);
-border: 1px solid rgba(169,0,0,0.35);
+border: 1px solid var(--border);
 border-radius: 4px;
 padding: 10px 12px;
 font-family:'IBM Plex Mono', monospace;
@@ -239,8 +252,8 @@ cursor:pointer;
 transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.copy-btn:hover{ background: var(--accent); color: var(--text); }
-.copy-btn.copied{ background: #ffffff; border-color: #ffffff; color: #000000; }
+.copy-btn:hover{ background: var(--accent); color: var(--accent-foreground); }
+.copy-btn.copied{ background: var(--text); border-color: var(--text); color: var(--bg); }
 
 .copy-btn:focus-visible{
 outline: 3px solid var(--focus);
